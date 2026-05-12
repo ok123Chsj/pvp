@@ -20,6 +20,8 @@
 
   // 暴露 API 給原本的 JavaScript 代碼使用
   window.fb = { db, ref, set, onValue, update, onDisconnect, remove };
+  window.startGame = function startGame() 
+window.startOnlineMode = functionstartOnlineMode() {
 </script>
 
     <meta charset="UTF-8">
@@ -275,7 +277,8 @@ function bindButtons() {
     };
 
     const setupBtn = (id, type) => {
-         const btn = document.getElementById(`p${id}-btn-${type}`); if(!btn) return;
+         const btn = document.getElementById(`p${id}-btn-${type}`);
+         if(!btn) return;
          btn.addEventListener('touchstart', (e) => { 
              e.preventDefault(); 
              
