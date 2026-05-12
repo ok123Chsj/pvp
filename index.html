@@ -129,7 +129,12 @@ document.getElementById('lobby').style.display = 'none'; // 隱藏大廳
     const canvas = document.getElementById('gameCanvas');
     const ctx = canvas.getContext('2d');
     
-    // --- Globals ---
+    // --- Globals —
+    let isOnlineMode = false;
+    let myRole = ""; // 'p1' 或 'p2'
+    let roomId = "battle_01"; 
+    let p1Touch = { joyX: 0, joyY: 0 };
+    let p2Touch = { joyX: 0, joyY: 0 };
     let width, height, gameRunning = false;
     let p1CharIdx = 0, p2CharIdx = 0;
     let p1Page = 0, p2Page = 0;
